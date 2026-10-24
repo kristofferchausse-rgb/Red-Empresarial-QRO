@@ -1,0 +1,104 @@
+/* Cantera & Basalt Editorial Component Classes */
+
+.bg-background { background-color: var(--background); }
+.bg-surface { background-color: var(--surface); }
+.bg-surface-dim { background-color: var(--surface-dim); }
+.bg-surface-bright { background-color: var(--surface-bright); }
+.bg-surface-container-lowest { background-color: var(--surface-container-lowest); }
+.bg-surface-container-low { background-color: var(--surface-container-low); }
+.bg-surface-container { background-color: var(--surface-container); }
+.bg-surface-container-high { background-color: var(--surface-container-high); }
+.bg-surface-container-highest { background-color: var(--surface-container-highest); }
+.bg-primary { background-color: var(--primary); }
+.bg-primary-container { background-color: var(--primary-container); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-secondary-container { background-color: var(--secondary-container); }
+.bg-secondary-fixed { background-color: var(--secondary-fixed); }
+.bg-tertiary-container { background-color: var(--tertiary-container); }
+.bg-tertiary-fixed { background-color: var(--tertiary-fixed); }
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-on-secondary { color: var(--on-secondary); }
+.text-on-surface { color: var(--on-surface); }
+.text-on-surface-variant { color: var(--on-surface-variant); }
+.text-surface-bright { color: var(--surface-bright); }
+.text-surface-variant { color: var(--surface-variant); }
+.text-outline { color: var(--outline); }
+.text-outline-variant { color: var(--outline-variant); }
+.text-tertiary-container { color: var(--tertiary-container); }
+.text-tertiary-fixed { color: var(--tertiary-fixed); }
+.text-background { color: var(--background); }
+
+.border-outline { border-color: var(--outline); }
+.border-outline-variant { border-color: var(--outline-variant); }
+.border-primary { border-color: var(--primary); }
+.border-secondary { border-color: var(--secondary); }
+.border-tertiary-container { border-color: var(--tertiary-container); }
+
+/* Spacing Utilities */
+.px-margin-md { padding-left: var(--margin-md); padding-right: var(--margin-md); }
+.px-margin-lg { padding-left: var(--margin-lg); padding-right: var(--margin-lg); }
+.py-margin-md { padding-top: var(--margin-md); padding-bottom: var(--margin-md); }
+.pb-margin-md { padding-bottom: var(--margin-md); }
+.mb-margin-md { margin-bottom: var(--margin-md); }
+.gap-gutter { gap: var(--gutter); }
+.gap-gutter-lg { gap: var(--gutter-lg); }
+
+/* Quick Filter Pills */
+.quick-pill {
+  cursor: pointer;
+  border-radius: 0px !important;
+  transition: all 150ms ease-in-out;
+}
+
+.quick-pill:hover {
+  border-color: var(--primary);
+  background-color: var(--surface-container-high);
+}
+
+/* Button Reset */
+.btn-broadsheet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0px !important;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toast {
+  background: var(--primary-container);
+  color: var(--surface-bright);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0px !important;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--outline);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease forwards;
+}

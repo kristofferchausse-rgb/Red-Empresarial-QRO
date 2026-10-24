@@ -1,0 +1,98 @@
+:root {
+  /* Cantera & Basalt Editorial Design Tokens */
+  --background: #fbf9f6;
+  --surface: #fbf9f6;
+  --surface-dim: #dbdad7;
+  --surface-bright: #fbf9f6;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f5f3f0;
+  --surface-container: #efeeeb;
+  --surface-container-high: #eae8e5;
+  --surface-container-highest: #e4e2df;
+
+  --on-surface: #1b1c1a;
+  --on-surface-variant: #46464b;
+  --on-background: #1b1c1a;
+  --inverse-surface: #30312f;
+  --inverse-on-surface: #f2f0ed;
+
+  --outline: #76777b;
+  --outline-variant: #c7c6cb;
+  --surface-tint: #5e5e62;
+
+  --primary: #000000;
+  --on-primary: #ffffff;
+  --primary-container: #1b1b1f;
+  --on-primary-container: #848387;
+
+  --secondary: #a23e18;          /* Cantera Terracotta */
+  --secondary-hover: #822801;
+  --secondary-container: #fe8357;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #6f2000;
+  --secondary-fixed: #ffdbcf;
+  --secondary-fixed-dim: #ffb59c;
+
+  --tertiary: #000000;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #0b1f14;
+  --on-tertiary-container: #728979;
+  --tertiary-fixed: #d0e9d6;
+  --tertiary-fixed-dim: #b4ccba;
+
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+
+  /* Typography Families */
+  --font-headline: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Zero Radius: Sharp Architectural Edges */
+  --radius-default: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 9999px; /* only for tiny pips */
+
+  /* Spacing Scale */
+  --gutter: 1.5rem;
+  --gutter-lg: 2.5rem;
+  --margin: 1.25rem;
+  --margin-md: 2.5rem;
+  --margin-lg: 4rem;
+  --space-xs: 0.375rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+
+  /* Legacy & Semantic Token Mappings (Broadsheet Bridge) */
+  --brand-terracotta: var(--secondary);
+  --brand-emerald-verified: #0d9488;
+  --bg-surface: var(--surface-container-lowest);
+  --bg-subtle: var(--surface-container-low);
+  --bg-dark: var(--primary-container);
+  
+  --border-subtle: var(--outline-variant);
+  --border-medium: var(--outline-variant);
+  --border-dark: var(--primary);
+  
+  --text-main: var(--primary);
+  --text-muted: var(--on-surface-variant);
+  --text-light: var(--outline);
+  --text-on-dark: var(--on-primary);
+  --text-on-dark-muted: var(--outline-variant);
+  
+  --font-editorial: var(--font-headline);
+  --font-sans: var(--font-body);
+  --surface-variant: var(--surface-container-highest);
+  
+  --radius-sm: var(--radius-default);
+  --radius-md: var(--radius-default);
+  
+  /* Layout Metrics */
+  --header-height: 68px;
+  --mobile-nav-height: 60px;
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+}

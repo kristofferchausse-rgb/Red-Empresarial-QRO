@@ -1,0 +1,552 @@
+/* Editorial Page Layouts & Swiss Magazine Grids */
+
+/* Navigation Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(251, 250, 247, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-editorial);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.brand-logo-badge {
+  background: var(--brand-terracotta);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.45rem;
+  border-radius: 0px !important;
+  letter-spacing: 0.1em;
+}
+
+.nav-links-desktop {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+}
+
+.nav-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--text-main);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--text-main);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Category Strip Scroller */
+.category-scroller {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.75rem 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.category-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border-radius: 0px !important;
+  margin-right: 0.5rem;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.category-pill:hover, .category-pill.active {
+  background: var(--bg-subtle);
+  border-color: var(--border-medium);
+  color: var(--text-main);
+}
+
+/* 1. FULL PAGE / IMMERSIVE EDITORIAL HERO (Magazine Cover Presence) */
+.featured-hero-fullbleed {
+  position: relative;
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1.5px solid var(--text-main);
+  overflow: hidden;
+}
+
+.featured-hero-fullbleed-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.featured-hero-fullbleed-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.42) contrast(1.1);
+  transform: scale(1.02);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featured-hero-fullbleed:hover .featured-hero-fullbleed-bg img {
+  transform: scale(1.05);
+}
+
+.featured-hero-fullbleed-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+@media (min-width: 992px) {
+  .featured-hero-fullbleed-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+    align-items: flex-end;
+  }
+}
+
+.hero-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fb923c;
+  margin-bottom: 1.5rem;
+}
+
+.hero-editorial-title {
+  font-family: var(--font-editorial);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.hero-editorial-desc {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  max-width: 680px;
+  margin-bottom: 2.25rem;
+}
+
+.hero-side-card {
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+}
+
+.hero-ticker-bar {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.65);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-on-dark-muted);
+}
+
+/* 2. Industry Explorer Cards (Sharp Swiss Box) */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.industry-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0px !important;
+  padding: 2rem;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.industry-card:hover {
+  border-color: var(--text-main);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.industry-card-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-terracotta);
+  margin-bottom: 1.5rem;
+}
+
+.industry-card-title {
+  font-family: var(--font-editorial);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.industry-card-tagline {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.industry-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* 3. Opportunities Bento & Feed */
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.75rem;
+}
+
+.opportunity-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: 0px !important;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+  height: 100%;
+}
+
+.opportunity-card:hover {
+  border-color: var(--text-main);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.opportunity-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.opportunity-card-title {
+  font-family: var(--font-editorial);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
+}
+
+.opportunity-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.opportunity-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+}
+
+/* 4. Editorial News Cards */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border-radius: 0px !important;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.news-card:hover {
+  border-color: var(--text-main);
+}
+
+.news-card-media {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.news-card:hover .news-card-img {
+  transform: scale(1.04);
+}
+
+.news-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.news-card-category {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--brand-terracotta);
+  margin-bottom: 0.6rem;
+}
+
+.news-card-title {
+  font-family: var(--font-editorial);
+  font-size: 1.45rem;
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
+}
+
+.news-card-summary {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  line-height: 1.55;
+}
+
+.news-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* 5. Member Mini-Site Profile View */
+.profile-hero {
+  position: relative;
+  background: var(--bg-dark);
+  color: #ffffff;
+  border-radius: 0px !important;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border: 1px solid var(--border-dark);
+}
+
+.profile-cover-wrap {
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.profile-hero-content {
+  padding: 0 3rem 3rem;
+  position: relative;
+  z-index: 2;
+  margin-top: -70px;
+}
+
+.profile-header-flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-logo-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 0px !important;
+  border: 3px solid #ffffff;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-logo-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .profile-grid-layout {
+    grid-template-columns: 2.4fr 1fr;
+  }
+}
+
+.profile-module {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: 0px !important;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.profile-module-title {
+  font-family: var(--font-editorial);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.75rem;
+}
+
+.capabilities-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.capability-item {
+  padding: 1.25rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--brand-terracotta);
+}
+
+/* Floating AI Concierge */
+.floating-concierge-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--text-main);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.85rem 1.6rem;
+  border-radius: 0px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  z-index: 900;
+  transition: all var(--transition-fast);
+}
+
+.floating-concierge-pill:hover {
+  background: var(--brand-terracotta);
+  border-color: var(--brand-terracotta);
+}
+
+.floating-concierge-dot {
+  width: 8px;
+  height: 8px;
+  background: #fb923c;
+}

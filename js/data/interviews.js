@@ -1,0 +1,50 @@
+export const interviewsData = [
+  {
+    id: "interview-sofia-mendoza",
+    isDemo: true,
+    name: "Mtra. Sofía Mendoza Alcocer",
+    role: "Directora General y Cofundadora, Kallpa Robotics",
+    role_en: "CEO & Co-Founder, Kallpa Robotics",
+    company: "Kallpa Robotics & Automation",
+    companyId: "kallpa-robotics",
+    companySlug: "kallpa-robotics",
+    industry: "Robótica e Inteligencia Artificial",
+    quote: "Querétaro ya no compite por mano de obra barata. Competimos por integración robótica especializada, visión inteligente y cambios rápidos de línea.",
+    quote_en: "Querétaro is no longer competing on cheap labor. We are competing on custom robotic integration, vision intelligence, and rapid line changeovers.",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80",
+    episodeDuration: "18 min de audio",
+    episodeDuration_en: "18 min listen"
+  },
+  {
+    id: "interview-rodrigo-villarreal",
+    isDemo: true,
+    name: "Ing. Rodrigo Villarreal Ramos",
+    role: "VP Operaciones, Aerotech Composites",
+    role_en: "VP Operations, Aerotech Composites",
+    company: "Aerotech Composites Bajío",
+    companyId: "aerotech-composites",
+    companySlug: "aerotech-composites",
+    industry: "Aeroespacial y Defensa",
+    quote: "Acreditar auditorías NADCAP y AS9100 requiere una cultura de trazabilidad milimétrica. Eso es lo que hace a Querétaro un referente aeroespacial inquebrantable.",
+    quote_en: "Passing NADCAP and AS9100 audits requires a culture of relentless traceability. That is what makes Querétaro aerospace globally unshakeable.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80",
+    episodeDuration: "24 min de audio",
+    episodeDuration_en: "24 min listen"
+  },
+  {
+    id: "interview-andrea-trejo",
+    isDemo: true,
+    name: "Ing. Andrea Trejo Morán",
+    role: "VP Infraestructura Renovable, Soluciones Sustentables",
+    role_en: "VP Renewable Infrastructure, Soluciones Sustentables",
+    company: "Soluciones Energéticas Sustentables Bajío",
+    companyId: "soluciones-energeticas-sustentables",
+    companySlug: "soluciones-energeticas-sustentables",
+    industry: "Energía Limpia",
+    quote: "Las microrredes solares con baterías de respaldo son la solución más efectiva para proteger a las plantas contra picos de voltaje y saturación de red.",
+    quote_en: "Industrial microgrids with battery peak-shaving are the single most effective way to protect manufacturing plants against grid voltage spikes.",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
+    episodeDuration: "15 min de audio",
+    episodeDuration_en: "15 min listen"
+  }
+];
